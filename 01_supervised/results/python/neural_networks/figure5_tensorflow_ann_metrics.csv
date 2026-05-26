@@ -1,0 +1,3 @@
+model,hidden_layers,activation,squared_l2_penalty,epochs,R2,RMSE
+5a Oversized ANN,5 + 5,tanh sigmoid,0.007,200,0.8459154277866093,0.5283051771921272
+5b Compact ANN,3,tanh sigmoid,0.003,300,0.6194326755355428,0.8302732322814365

@@ -1,0 +1,157 @@
+target,model,Term,gain_portion,split_count,is_snf
+yield,"Random forest, 100 trees",Temp1,0.33738846459374566,458.0,False
+yield,"Random forest, 100 trees",FlowC1,0.2441962067542449,286.0,False
+yield,"Random forest, 100 trees",FlowC9,0.08016285994352738,139.0,False
+yield,"Random forest, 100 trees",PressureC1,0.04051838029698448,233.0,False
+yield,"Random forest, 100 trees",Temp11,0.039502123947138236,158.0,False
+yield,"Random forest, 100 trees",TempC3,0.03188593370492649,154.0,False
+yield,"Random forest, 100 trees",OC1,0.028639916834507888,169.0,False
+yield,"Random forest, 100 trees",TempC1,0.020488205155707186,168.0,False
+yield,"Random forest, 100 trees",Random Uniform Noise,0.01983577720883469,184.0,True
+yield,"Random forest, 100 trees",Shuffle[yield],0.018569248476645345,160.0,True
+yield,"Random forest, 100 trees",FlowC3,0.01672805659757346,143.0,False
+yield,"Random forest, 100 trees",FlowC4,0.01483695895650136,67.0,False
+yield,"Random forest, 100 trees",Temp9,0.012318765748239745,46.0,False
+yield,"Random forest, 100 trees",Random Normal Noise,0.0117417216328529,133.0,True
+yield,"Random forest, 100 trees",FlowC2,0.010986027253891039,115.0,False
+yield,"Random forest, 100 trees",Temp10,0.010861458248292372,47.0,False
+yield,"Random forest, 100 trees",Temp7,0.010693595003271234,93.0,False
+yield,"Random forest, 100 trees",Temp2,0.010685929592194315,104.0,False
+yield,"Random forest, 100 trees",Temp8,0.00875854275699931,87.0,False
+yield,"Random forest, 100 trees",Temp12,0.00814794294486568,59.0,False
+yield,"Random forest, 100 trees",Temp4,0.006628127322636841,23.0,False
+yield,"Random forest, 100 trees",VapourPressure,0.006597123569199509,59.0,False
+yield,"Random forest, 100 trees",Temp5,0.004942773466230763,29.0,False
+yield,"Random forest, 100 trees",TempC2,0.001795858051531411,8.0,False
+yield,"Random forest, 100 trees",Temp6,0.001603079754201546,11.0,False
+yield,"Random forest, 100 trees",Temp3,0.0014869221852562716,13.0,False
+yield,"Boosted tree, 144 trees",Temp1,0.35707565382458417,46.0,False
+yield,"Boosted tree, 144 trees",FlowC1,0.2123845336564777,25.0,False
+yield,"Boosted tree, 144 trees",FlowC9,0.09785687791610766,32.0,False
+yield,"Boosted tree, 144 trees",PressureC1,0.05609099691088019,19.0,False
+yield,"Boosted tree, 144 trees",TempC3,0.04938561061974735,12.0,False
+yield,"Boosted tree, 144 trees",Temp9,0.028065585232970956,13.0,False
+yield,"Boosted tree, 144 trees",Temp11,0.02457447347778616,12.0,False
+yield,"Boosted tree, 144 trees",Temp10,0.022330809734666012,13.0,False
+yield,"Boosted tree, 144 trees",Random Normal Noise,0.018647905084231853,16.0,True
+yield,"Boosted tree, 144 trees",Temp4,0.01861933062725519,8.0,False
+yield,"Boosted tree, 144 trees",OC1,0.016003835142686527,16.0,False
+yield,"Boosted tree, 144 trees",Shuffle[yield],0.014963373921174267,10.0,True
+yield,"Boosted tree, 144 trees",FlowC3,0.010764218634995482,8.0,False
+yield,"Boosted tree, 144 trees",FlowC4,0.0102830626168722,11.0,False
+yield,"Boosted tree, 144 trees",Temp2,0.00990151233785363,7.0,False
+yield,"Boosted tree, 144 trees",VapourPressure,0.009364777249687838,4.0,False
+yield,"Boosted tree, 144 trees",Random Uniform Noise,0.009307973496748818,7.0,True
+yield,"Boosted tree, 144 trees",FlowC2,0.006354430957985418,5.0,False
+yield,"Boosted tree, 144 trees",Temp5,0.004993831070830317,4.0,False
+yield,"Boosted tree, 144 trees",Temp8,0.004807246450640833,4.0,False
+yield,"Boosted tree, 144 trees",Temp12,0.004181034235166598,2.0,False
+yield,"Boosted tree, 144 trees",Temp6,0.0032854492658465845,1.0,False
+yield,"Boosted tree, 144 trees",TempC2,0.003187406853261938,5.0,False
+yield,"Boosted tree, 144 trees",TempC1,0.003163695151874353,2.0,False
+yield,"Boosted tree, 144 trees",Temp7,0.00303417582751483,4.0,False
+yield,"Boosted tree, 144 trees",Temp3,0.0013721997021531374,2.0,False
+yield,"Single tree, one estimator",Temp1,0.319836355577987,7.0,False
+yield,"Single tree, one estimator",FlowC1,0.2272122349039107,4.0,False
+yield,"Single tree, one estimator",FlowC9,0.08108595202030637,2.0,False
+yield,"Single tree, one estimator",TempC3,0.08057452615063407,5.0,False
+yield,"Single tree, one estimator",Temp11,0.06539095949193788,2.0,False
+yield,"Single tree, one estimator",OC1,0.05043066921513189,4.0,False
+yield,"Single tree, one estimator",Shuffle[yield],0.04491735877775942,3.0,True
+yield,"Single tree, one estimator",PressureC1,0.04244136846995335,3.0,False
+yield,"Single tree, one estimator",FlowC3,0.038313597566168214,3.0,False
+yield,"Single tree, one estimator",Temp8,0.01254560662873022,1.0,False
+yield,"Single tree, one estimator",Temp12,0.01047393884829363,1.0,False
+yield,"Single tree, one estimator",Random Normal Noise,0.009470664316766285,1.0,True
+yield,"Single tree, one estimator",Temp2,0.009320951265312485,1.0,False
+yield,"Single tree, one estimator",Temp7,0.007985816767108495,1.0,False
+yield,"Single tree, one estimator",Temp5,0.0,0.0,False
+yield,"Single tree, one estimator",Temp4,0.0,0.0,False
+yield,"Single tree, one estimator",TempC2,0.0,0.0,False
+yield,"Single tree, one estimator",Temp3,0.0,0.0,False
+yield,"Single tree, one estimator",FlowC2,0.0,0.0,False
+yield,"Single tree, one estimator",Temp9,0.0,0.0,False
+yield,"Single tree, one estimator",Temp10,0.0,0.0,False
+yield,"Single tree, one estimator",FlowC4,0.0,0.0,False
+yield,"Single tree, one estimator",VapourPressure,0.0,0.0,False
+yield,"Single tree, one estimator",TempC1,0.0,0.0,False
+yield,"Single tree, one estimator",Random Uniform Noise,0.0,0.0,True
+yield,"Single tree, one estimator",Temp6,0.0,0.0,False
+shuffled yield,"Random forest, 100 trees",Random Uniform Noise,0.09885069329430884,286.0,True
+shuffled yield,"Random forest, 100 trees",TempC1,0.08158752747309611,219.0,False
+shuffled yield,"Random forest, 100 trees",Temp11,0.07689878607276446,204.0,False
+shuffled yield,"Random forest, 100 trees",FlowC2,0.06199720578542549,204.0,False
+shuffled yield,"Random forest, 100 trees",Shuffle[yield],0.05862507492207854,205.0,True
+shuffled yield,"Random forest, 100 trees",Random Normal Noise,0.05702635347735456,223.0,True
+shuffled yield,"Random forest, 100 trees",Temp7,0.05297661437770399,153.0,False
+shuffled yield,"Random forest, 100 trees",Temp1,0.052195714961737166,188.0,False
+shuffled yield,"Random forest, 100 trees",TempC3,0.05208446054545732,168.0,False
+shuffled yield,"Random forest, 100 trees",FlowC4,0.04722699300577478,141.0,False
+shuffled yield,"Random forest, 100 trees",OC1,0.04447056962461881,148.0,False
+shuffled yield,"Random forest, 100 trees",FlowC3,0.03854399832883468,130.0,False
+shuffled yield,"Random forest, 100 trees",Temp2,0.03655678925599832,108.0,False
+shuffled yield,"Random forest, 100 trees",PressureC1,0.0339354822734619,133.0,False
+shuffled yield,"Random forest, 100 trees",Temp12,0.032741371653614765,99.0,False
+shuffled yield,"Random forest, 100 trees",VapourPressure,0.031117241892202895,103.0,False
+shuffled yield,"Random forest, 100 trees",Temp8,0.03104620701394962,97.0,False
+shuffled yield,"Random forest, 100 trees",FlowC1,0.028626280923046487,106.0,False
+shuffled yield,"Random forest, 100 trees",Temp5,0.014993606463752399,41.0,False
+shuffled yield,"Random forest, 100 trees",FlowC9,0.014147240045517451,56.0,False
+shuffled yield,"Random forest, 100 trees",Temp4,0.014134077209970721,36.0,False
+shuffled yield,"Random forest, 100 trees",Temp3,0.01179114964469714,32.0,False
+shuffled yield,"Random forest, 100 trees",Temp10,0.010438322158844464,40.0,False
+shuffled yield,"Random forest, 100 trees",Temp6,0.008383513530628913,19.0,False
+shuffled yield,"Random forest, 100 trees",Temp9,0.00827065209945265,35.0,False
+shuffled yield,"Random forest, 100 trees",TempC2,0.0013340739657075377,4.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp11,0.11742700735768245,26.0,False
+shuffled yield,"Boosted tree, 144 trees",FlowC2,0.09042432148461399,20.0,False
+shuffled yield,"Boosted tree, 144 trees",Shuffle[yield],0.08588010677445425,22.0,True
+shuffled yield,"Boosted tree, 144 trees",TempC1,0.08390621181962632,26.0,False
+shuffled yield,"Boosted tree, 144 trees",Random Normal Noise,0.08170333088951477,26.0,True
+shuffled yield,"Boosted tree, 144 trees",FlowC4,0.08078187756389496,20.0,False
+shuffled yield,"Boosted tree, 144 trees",Random Uniform Noise,0.06989465075205985,18.0,True
+shuffled yield,"Boosted tree, 144 trees",Temp7,0.05364674748925181,15.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp2,0.04756881280204337,14.0,False
+shuffled yield,"Boosted tree, 144 trees",FlowC1,0.04076339645912278,13.0,False
+shuffled yield,"Boosted tree, 144 trees",FlowC3,0.03897740849807424,13.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp8,0.03472579294752584,7.0,False
+shuffled yield,"Boosted tree, 144 trees",TempC3,0.03354325047806907,13.0,False
+shuffled yield,"Boosted tree, 144 trees",FlowC9,0.02301245987405698,8.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp1,0.02194525361012502,10.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp6,0.018252088475980217,4.0,False
+shuffled yield,"Boosted tree, 144 trees",PressureC1,0.016701167645098363,7.0,False
+shuffled yield,"Boosted tree, 144 trees",VapourPressure,0.014184800733669099,3.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp10,0.012745482516837495,6.0,False
+shuffled yield,"Boosted tree, 144 trees",OC1,0.010229447487529861,8.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp12,0.010043522887952665,5.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp5,0.0075621635256098805,2.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp3,0.0060806979272067276,2.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp4,0.0,0.0,False
+shuffled yield,"Boosted tree, 144 trees",Temp9,0.0,0.0,False
+shuffled yield,"Boosted tree, 144 trees",TempC2,0.0,0.0,False
+shuffled yield,"Single tree, one estimator",Shuffle[yield],0.12966805176549542,4.0,True
+shuffled yield,"Single tree, one estimator",Temp11,0.12023613457969631,4.0,False
+shuffled yield,"Single tree, one estimator",Random Normal Noise,0.10140576863236857,4.0,True
+shuffled yield,"Single tree, one estimator",Temp7,0.08049421598634983,3.0,False
+shuffled yield,"Single tree, one estimator",PressureC1,0.05954787065652524,3.0,False
+shuffled yield,"Single tree, one estimator",FlowC2,0.05805102305847826,3.0,False
+shuffled yield,"Single tree, one estimator",TempC3,0.05610304295935404,2.0,False
+shuffled yield,"Single tree, one estimator",Random Uniform Noise,0.05234778356254463,1.0,True
+shuffled yield,"Single tree, one estimator",Temp1,0.050171291338642045,1.0,False
+shuffled yield,"Single tree, one estimator",Temp6,0.04843890438220502,1.0,False
+shuffled yield,"Single tree, one estimator",FlowC1,0.04449472438846291,2.0,False
+shuffled yield,"Single tree, one estimator",FlowC4,0.04387466860298675,2.0,False
+shuffled yield,"Single tree, one estimator",Temp8,0.04149567679932721,1.0,False
+shuffled yield,"Single tree, one estimator",OC1,0.03507230837450716,2.0,False
+shuffled yield,"Single tree, one estimator",FlowC3,0.029197619139755555,2.0,False
+shuffled yield,"Single tree, one estimator",VapourPressure,0.01798959598121835,1.0,False
+shuffled yield,"Single tree, one estimator",Temp9,0.016177466742662416,1.0,False
+shuffled yield,"Single tree, one estimator",Temp5,0.015233853049420265,1.0,False
+shuffled yield,"Single tree, one estimator",TempC2,0.0,0.0,False
+shuffled yield,"Single tree, one estimator",Temp4,0.0,0.0,False
+shuffled yield,"Single tree, one estimator",Temp3,0.0,0.0,False
+shuffled yield,"Single tree, one estimator",Temp2,0.0,0.0,False
+shuffled yield,"Single tree, one estimator",FlowC9,0.0,0.0,False
+shuffled yield,"Single tree, one estimator",Temp10,0.0,0.0,False
+shuffled yield,"Single tree, one estimator",TempC1,0.0,0.0,False
+shuffled yield,"Single tree, one estimator",Temp12,0.0,0.0,False

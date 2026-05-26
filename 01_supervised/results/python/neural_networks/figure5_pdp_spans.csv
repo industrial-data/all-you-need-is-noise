@@ -1,0 +1,9 @@
+model,feature,pdp_min,pdp_max,pdp_span
+5a Oversized ANN,Difference[PressureC1],68.19537,69.71214,1.5167694
+5a Oversized ANN,FlowC1,68.65174,70.339775,1.688034
+5a Oversized ANN,Random Normal Noise,69.39298,69.4695,0.0765152
+5a Oversized ANN,Temp1,67.99974,69.94454,1.9448013
+5b Compact ANN,Difference[PressureC1],67.84069,69.70192,1.861229
+5b Compact ANN,FlowC1,68.487976,70.03593,1.5479507
+5b Compact ANN,Random Normal Noise,69.409836,69.4199,0.010063171
+5b Compact ANN,Temp1,68.05503,69.71779,1.6627579

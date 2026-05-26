@@ -1,0 +1,7 @@
+target,model,training_R2
+yield,"Random forest, 100 trees",0.827236464605713
+yield,"Boosted tree, 144 trees",0.7613400620034365
+yield,"Single tree, one estimator",0.8740212391255837
+shuffled yield,"Random forest, 100 trees",0.6873091019788735
+shuffled yield,"Boosted tree, 144 trees",0.6022242261063886
+shuffled yield,"Single tree, one estimator",0.7359826610350839

@@ -1,0 +1,5 @@
+Term,split_count,gain_portion,is_noise
+Temp1,4,0.4072781075845537,False
+FlowC1,3,0.359306047818061,False
+Delta[PressureC1],4,0.2094204157671905,False
+Random Uniform Noise,1,0.023995428830194745,True
