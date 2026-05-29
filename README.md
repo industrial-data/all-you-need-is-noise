@@ -31,8 +31,35 @@ The approach is intentionally simple and broadly applicable.
 - **Datasets (XLSX)**  
   Data exported from JMP for inspection and reuse.
 
-- **Active learning notebook**  
-  Example of extending the same principle to sequential experimentation.
+- **Python reproduction notebooks**  
+  Python notebooks are being added to reproduce the paper results and figures alongside the original JMP workflows.
+
+---
+
+## Python notebook index
+
+Use the links below to open the Python reproduction notebook for the result you want to inspect.
+
+### Supervised learning
+
+- [Figures 1 to 3: tree models](01_supervised/results/python/trees/figures_1_to_3_tree_models.ipynb)
+- [Figure 4: tree regularization](01_supervised/results/python/trees/figure_4_tree_regularization.ipynb)
+- [Figure 5: neural networks](01_supervised/results/python/neural_networks/figure_5_neural_networks.ipynb)
+
+### Unsupervised learning
+
+- [Figures 6 to 8: density dataset PCA reproduction](02_unsupervised/01_density_dataset/results/python/figures_6_7_8_density_pca_reproduction.ipynb)
+- [Figures 9 to 11: Tennessee Eastman Process PCA reproduction](02_unsupervised/02_TEP/results/python/figures_9_10_11_tep_pca_reproduction.ipynb)
+- [Figure 12: Tennessee Eastman Process bootstrap forest](02_unsupervised/02_TEP/results/python/figure_12_tep_bootstrap_forest.ipynb)
+
+### Design of experiments
+
+- [Figures 13 and 14: pyDOE and LightGBM reproduction](03_DoE/python/reproduce_figures_13_14_pydoe_lightgbm.ipynb)
+
+### Active learning
+
+- [Figures 15 to 17: active learning reproduction](04_Act_Learning/reproduce_figures_15_16_17_active_learning.ipynb)
+- [Active learning experiment notebook](04_Act_Learning/2025-05-28-normal-noisy-test_functions_standarized_paper_parallel_length.ipynb)
 
 ---
 
@@ -40,7 +67,7 @@ The approach is intentionally simple and broadly applicable.
 
 - Open the JMP files to explore the analyses  
 - Use the XLSX datasets for quick access to the data  
-- Run the notebook for the active learning example  
+- Run the Python notebooks above to reproduce the corresponding paper figures  
 
 ---
 
@@ -67,6 +94,6 @@ See [LICENSE.md](LICENSE.md) for full terms.
 This repository is provided for research and educational purposes only.  
 Use of the materials is at your own risk.
 
-The authors make no warranties and are not liable for any damages arising from its use.
+The authors and their affiliated institutions make no warranties and are not liable for any damages arising from its use.
 
 This disclaimer applies to all files and materials in this repository. See [LICENSE.md](LICENSE.md).
