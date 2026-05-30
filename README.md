@@ -58,8 +58,8 @@ Use the links below to open the Python reproduction notebook for the result you 
 
 ### Active learning
 
-- [Figures 15 to 17: active learning reproduction](04_Act_Learning/reproduce_figures_15_16_17_active_learning.ipynb)
-- [Active learning experiment notebook](04_Act_Learning/2025-05-28-normal-noisy-test_functions_standarized_paper_parallel_length.ipynb)
+- [Figures 15 to 17: active learning reproduction](04_Act_Learning/python/reproduce_figures_15_16_17_active_learning.ipynb)
+- [Active learning experiment notebook](04_Act_Learning/python/2025-05-28-normal-noisy-test_functions_standarized_paper_parallel_length.ipynb)
 
 ---
 
