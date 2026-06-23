@@ -54,7 +54,7 @@ Use the links below to open the Python reproduction notebook for the result you 
 
 ### Design of experiments
 
-- [Figures 13 and 14: pyDOE and LightGBM reproduction](03_DoE/python/reproduce_figures_13_14_pydoe_lightgbm.ipynb)
+- [Figures 13 and 14: pydoe and LightGBM reproduction](03_DoE/python/reproduce_figures_13_14_pydoe_lightgbm.ipynb)
 
 ### Active learning
 

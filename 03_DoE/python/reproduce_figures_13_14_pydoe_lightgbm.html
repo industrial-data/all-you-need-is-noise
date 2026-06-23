@@ -7802,7 +7802,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Reproduce-Figures-13-and-14:-DoE,-synthetic-noise-feature,-and-LightGBM-bootstrap-forest">Reproduce Figures 13 and 14: DoE, synthetic-noise feature, and LightGBM bootstrap forest<a class="anchor-link" href="#Reproduce-Figures-13-and-14:-DoE,-synthetic-noise-feature,-and-LightGBM-bootstrap-forest">¶</a></h1><p>This notebook reproduces Figures 13 and 14 from the Design of Experiments section of the paper using simple, readable Python. The exact DSD and I-optimal RSM layouts are loaded from the paper workbook because the original <code>pyDOE</code> package provides Latin-hypercube and classical factorial/response-surface helpers, but it does not implement JMP's Definitive Screening Design or I-optimal design generator. The notebook still uses <code>pyDOE.lhs</code> for the reproducible space-filling design path and keeps the paper workbook as the source of record for matching the published figure.</p>
+<h1 id="Reproduce-Figures-13-and-14:-DoE,-synthetic-noise-feature,-and-LightGBM-bootstrap-forest">Reproduce Figures 13 and 14: DoE, synthetic-noise feature, and LightGBM bootstrap forest<a class="anchor-link" href="#Reproduce-Figures-13-and-14:-DoE,-synthetic-noise-feature,-and-LightGBM-bootstrap-forest">¶</a></h1><p>This notebook reproduces Figures 13 and 14 from the Design of Experiments section of the paper using simple, readable Python. The exact DSD and I-optimal RSM layouts are loaded from the paper workbook because the <code>pydoe</code> package provides Latin-hypercube and classical factorial/response-surface helpers, but it does not implement JMP's Definitive Screening Design or I-optimal design generator. The notebook uses <code>pydoe.lhs</code> for the reproducible space-filling design path and keeps the paper workbook as the source of record for matching the published figure.</p>
 </div>
 </div>
 </div>
@@ -7832,27 +7832,12 @@ a.anchor-link {
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">ensure</span><span class="p">(</span><span class="n">import_name</span><span class="p">,</span> <span class="n">package_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fallback_package</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ensure</span><span class="p">(</span><span class="n">import_name</span><span class="p">,</span> <span class="n">package_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Install a package only when the current Python environment is missing it."""</span>
     <span class="n">package_name</span> <span class="o">=</span> <span class="n">package_name</span> <span class="ow">or</span> <span class="n">import_name</span>
     <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="n">import_name</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"pip"</span><span class="p">,</span> <span class="s2">"install"</span><span class="p">,</span> <span class="n">package_name</span><span class="p">])</span>
-    <span class="k">except</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">CalledProcessError</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">fallback_package</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">raise</span>
-        <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"pip"</span><span class="p">,</span> <span class="s2">"install"</span><span class="p">,</span> <span class="n">fallback_package</span><span class="p">])</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">ensure_pydoe</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">"""Install pyDOE, accepting either the new `pydoe` or classic `pyDOE` import name."""</span>
-    <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">"pydoe"</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">"pyDOE"</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"pip"</span><span class="p">,</span> <span class="s2">"install"</span><span class="p">,</span> <span class="s2">"git+https://github.com/pydoe/pydoe.git"</span><span class="p">])</span>
-    <span class="k">except</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">CalledProcessError</span><span class="p">:</span>
-        <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"pip"</span><span class="p">,</span> <span class="s2">"install"</span><span class="p">,</span> <span class="s2">"pyDOE"</span><span class="p">])</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">check_call</span><span class="p">([</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="s2">"-m"</span><span class="p">,</span> <span class="s2">"pip"</span><span class="p">,</span> <span class="s2">"install"</span><span class="p">,</span> <span class="n">package_name</span><span class="p">])</span>
 
 
 <span class="k">for</span> <span class="n">import_name</span><span class="p">,</span> <span class="n">package_name</span> <span class="ow">in</span> <span class="p">[</span>
@@ -7868,10 +7853,8 @@ a.anchor-link {
 <span class="p">]:</span>
     <span class="n">ensure</span><span class="p">(</span><span class="n">import_name</span><span class="p">,</span> <span class="n">package_name</span><span class="p">)</span>
 
-<span class="c1"># Prefer the GitHub pyDOE project requested for this reproduction.</span>
-<span class="c1"># Some older Python kernels cannot satisfy the current GitHub scipy requirement,</span>
-<span class="c1"># so the classic PyPI pyDOE release is used as a compatible fallback.</span>
-<span class="n">ensure_pydoe</span><span class="p">()</span>
+<span class="c1"># Install the GitHub pydoe project requested for this reproduction.</span>
+<span class="n">ensure</span><span class="p">(</span><span class="s2">"pydoe"</span><span class="p">,</span> <span class="s2">"git+https://github.com/pydoe/pydoe.git"</span><span class="p">)</span>
 
 <span class="c1"># On macOS, LightGBM may also need the OpenMP runtime.</span>
 <span class="c1"># If importing LightGBM fails with a libomp error, install it once with:</span>
@@ -7901,10 +7884,7 @@ a.anchor-link {
 <span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span> <span class="k">as</span> <span class="n">PILImage</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">lightgbm</span><span class="w"> </span><span class="kn">import</span> <span class="n">LGBMRegressor</span>
-<span class="k">try</span><span class="p">:</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">pydoe</span><span class="w"> </span><span class="kn">import</span> <span class="n">lhs</span>
-<span class="k">except</span> <span class="ne">ModuleNotFoundError</span><span class="p">:</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">pyDOE</span><span class="w"> </span><span class="kn">import</span> <span class="n">lhs</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pydoe</span><span class="w"> </span><span class="kn">import</span> <span class="n">lhs</span>
 
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">UserWarning</span><span class="p">)</span>
 
@@ -8291,7 +8271,7 @@ Definitive Screening Design -2.0  0.0 0.056725
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="pyDOE-Latin-hypercube-design-helper">pyDOE Latin-hypercube design helper<a class="anchor-link" href="#pyDOE-Latin-hypercube-design-helper">¶</a></h2><p><code>pyDOE.lhs</code> is the part of pyDOE used here for space-filling designs. The published figure is reproduced from the workbook's exact Latin-hypercube coordinates; the helper below shows the equivalent reproducible pyDOE path for generating a fresh 3-factor Latin hypercube over the same factor bounds.</p>
+<h2 id="pydoe-Latin-hypercube-design-helper">pydoe Latin-hypercube design helper<a class="anchor-link" href="#pydoe-Latin-hypercube-design-helper">¶</a></h2><p><code>pydoe.lhs</code> is the part of pydoe used here for space-filling designs. The published figure is reproduced from the workbook's exact Latin-hypercube coordinates; the helper below shows the equivalent reproducible pydoe path for generating a fresh 3-factor Latin hypercube over the same factor bounds.</p>
 </div>
 </div>
 </div>
@@ -8305,7 +8285,7 @@ Definitive Screening Design -2.0  0.0 0.056725
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">make_pydoe_lhs</span><span class="p">(</span><span class="n">samples</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="n">RNG_SEED</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Create a 3-factor Latin hypercube over the paper's factor ranges."""</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>  <span class="c1"># pyDOE uses NumPy's global random state.</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>  <span class="c1"># pydoe uses NumPy's global random state.</span>
     <span class="n">unit</span> <span class="o">=</span> <span class="n">lhs</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">samples</span><span class="o">=</span><span class="n">samples</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="s2">"maximin"</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">lower</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">])</span>
     <span class="n">upper</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
@@ -8314,7 +8294,7 @@ Definitive Screening Design -2.0  0.0 0.056725
 
 
 <span class="n">pydoe_lh_example</span> <span class="o">=</span> <span class="n">make_pydoe_lhs</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Example pyDOE Latin-hypercube design:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Example pydoe Latin-hypercube design:"</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">pydoe_lh_example</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -8328,7 +8308,7 @@ Definitive Screening Design -2.0  0.0 0.056725
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Example pyDOE Latin-hypercube design:
+<pre>Example pydoe Latin-hypercube design:
 </pre>
 </div>
 </div>
